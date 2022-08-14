@@ -3,8 +3,8 @@ from selene import have, by
 
 
 @allure.title("Successful fill form")
-def test_successful(setup_chrome):
-    browser = setup_chrome
+def test_successful(setup_browser):
+    browser = setup_browser
     first_name = "Alyona"
     last_name = "Tch"
 
@@ -32,4 +32,3 @@ def test_successful(setup_chrome):
 
     with allure.step("Check form results"):
         browser.element("#example-modal-sizes-title-lg").should(have.text("Thanks for submitting the form"))
-
